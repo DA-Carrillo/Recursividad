@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="text" id="valor">
+	<input type="button" value="Calcular el Factorial" onclick="factorial();">
+	<input type="button" value="Suma del Vector" onclick="sumaVector();">
+	<input type="button" value="Multiplicacion del Vector" onclick="multiplicacionVector();">
+	<input type="button" value="Minimo Numero del Vector" onclick="numeroMenor();">
+</body>
+<script>
+	function factorial(){
+		var sumatori=0;
+		var x=0;
+		var valor=document.getElementById("valor").value;
+		var nombre=parseInt(valor);
+		console.log("El Factorial de "+nombre+" es ="+ nombre + " x ");
+		sumatori=nombre;
+		for(x=nombre-1; x>0; x--)
+		{
+			if (x!=1){
+				console.log(x + " x ");
+			}else{ 
+				console.log(x + "=");
+			}
+			sumatori=sumatori * x;
+		}
+		console.log(sumatori);
+		alert("El Factorial de "+nombre+" es = "+sumatori);
+	}
+
+	function sumaVector(){
+		var vector = [1,2,3,4];
+		var sumatoria = 1;
+		for(var i=0; i<vector.length ; i++){
+			sumatoria += vector[i];
+		}
+		console.log(sumatoria);
+		alert(sumatoria);
+	}
+
+	function multiplicacionVector(){
+		var vector = [1,2,3,4];
+		var sumatoria = 1;
+		for(var i=0; i<vector.length ; i++){
+			sumatoria *= vector[i];
+		}
+		console.log(sumatoria);
+		alert(sumatoria);
+	}
+
+	function numeroMenor(){
+		var vector = [1,2,3,4];
+		var min = vector[0];
+
+		for(var i=0; i< vector.length ;i++){
+			if(vector[i]<min){
+				min = vector[i];
+			}
+		}
+		console.log("El menor Numero del vector "+vector+" es: "+min );
+		alert("El menor Numero del vector "+vector+" es: "+min );
+	}
+
+
+
+</script>
+</html>
