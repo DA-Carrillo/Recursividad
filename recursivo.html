@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta author="author" content="David">
+	<title>Factorial</title>
+	
+</head>
+<body>
+
+	<input type="submit" onclick="factorialRecursivo(7)" value="Calcular Factorial">
+
+</body>
+
+<script>
+
+	var numero = 7;
+
+	function factorialRecursivo(valor) {
+
+		if (valor == 0) {
+
+			return 1;
+
+		} else {
+
+			return valor * factorialRecursivo(valor-1);
+
+		}	
+
+	}
+
+	console.log("Factorial de ",numero," es:",factorialRecursivo(numero));	
+
+</script>
+</html>
